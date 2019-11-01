@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Police Bot</title>
-	<link rel="stylesheet" type="text/css" href="media-player.css">
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script type="text/javascript" src="media-player2.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Police Bot</title>
+    <link rel="stylesheet" type="text/css" href="media-player.css">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
 </head>
 <body>
-<div id="media-player">
-	<!-- <div id="media-control">
-		<button id="play-pause-button" class="play" title="play" onclick="togglePlayPause();">Play</button>
-		<button id="stop-button" class="stop" title="stop" onclick="stopPlayer();">Stop</button>
-		<button id='volume-inc-button' class='volume-plus' title='increase volume'
-onclick='changeVolume("+");'>Increase volume</button>
-<button id='volume-dec-button' class='volume-minus' title='decrease volume'
-onclick='changeVolume("-");'>Decrease volume</button>
-	</div> -->
-	<video id="media-video" controls onloadeddata="data_on_load();">
-		<source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
-	</video>
-
+<div id="main">
+    <video id="video_player" controls></video>
+    <div id="content" style="display: none">
+        <div id="help-menu" class="display-flex"></div>
+        <div id="help-menu-expanded" class="display-none">
+            <div id="help-menu-expanded-navigation">
+                <div id="help-menu-expanded-back-button" class="bk-btn"><div class="bk-btn-triangle"></div><div class="bk-btn-bar"></div></div>
+<!--                <button id="help-menu-expanded-back-button">Back</button>-->
+            </div>
+            <div id="help-menu-expanded-content"></div>
+        </div>
+    </div>
 </div>
 </body>
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
+<!--<script>-->
+<!--    document.getElementById("video_player").style.display = "none";-->
+<!--</script>-->
 </html>
