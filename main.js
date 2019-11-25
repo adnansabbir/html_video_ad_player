@@ -44,7 +44,7 @@ $(document).ready(function () {
     video_player.controls = false;
     video_player.setAttribute('height', videoList['height']);
     video_player.setAttribute('width', videoList['width']);
-    // loadVideos();
+    loadVideos();
     document.addEventListener('touch', onTouchClick);
     document.addEventListener('click', onTouchClick);
 
