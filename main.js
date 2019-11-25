@@ -17,42 +17,6 @@ const videoList = {
     width: '100%',
 };
 
-const cards = {
-    data: {
-        1: {
-            title: "Contact",
-            card_style: {
-                'background-color': "#ff0000",
-            },
-            title_color: '#FFFFFF',
-            body: "<h1>This is Contact Page</h1>"
-        },
-        2: {
-            title: "Help",
-            card_style: {
-                'background-color': "#000000",
-            },
-            title_color: '#FFFFFF',
-            body: "<h1>This is Help Page</h1>"
-        },
-        3: {
-            title: "Emergency",
-            card_style: {
-                'background-color': "#80f2ff",
-            },
-            title_color: '#000000',
-            body: "<h1>This is Emergency Page</h1>"
-        },
-        4: {
-            title: "Flight Schedule",
-            card_style: null,
-            title_color: null,
-            body: "<h1>This is Flight Schedule Page</h1>"
-        }
-    },
-    total: 4,
-};
-
 const config = {
     card_list_gap: null,
     card_height: '45vh',
@@ -80,11 +44,11 @@ $(document).ready(function () {
     video_player.controls = false;
     video_player.setAttribute('height', videoList['height']);
     video_player.setAttribute('width', videoList['width']);
-    loadCards();
-    loadVideos();
-
+    // loadVideos();
     document.addEventListener('touch', onTouchClick);
     document.addEventListener('click', onTouchClick);
+
+    loadCards();
 });
 
 loadVideos = () => {
@@ -169,7 +133,7 @@ createCard = (card_key) => {
     }
     single_card.setAttribute('id', `card_${cards.data[card_key].title}`);
     single_card.setAttribute('title', `${cards.data[card_key].title}`);
-    single_card.setAttribute('class', `card`);
+    single_card.setAttribute('class', `main_menu_card`);
 
     let single_card_heading = document.createElement('span');
     single_card_heading.setAttribute('class', 'card-heading');

@@ -24,7 +24,7 @@ body, html {
     grid-gap: 5vh;
 }
 
-.card {
+.main_menu_card {
     height: 40vh;
     width: 40vw;
     display: grid;
